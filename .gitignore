@@ -36,3 +36,5 @@ Thumbs.db
 # Vercel & build artifacts
 .vercel/
 *.log
+
+.vercel
