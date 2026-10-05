@@ -1,0 +1,453 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- ==========================================================================
+     HERO SECTION
+     ========================================================================== -->
+<div class="hero">
+    <div class="wrap hero-grid">
+        <div class="hero-content">
+            <span class="sec-badge">IT Solutions &amp; Digital Services &bull; Chennai</span>
+            <h1>Build. Grow.<br><span class="rot" id="rot">Go Digital.</span></h1>
+            <p class="lead">Websites, mobile apps and business software for small businesses, startups, clinics and institutions. Dependable technology without unnecessary complexity or cost.</p>
+            <div class="cta-row">
+                <a class="btn btn-primary btn-lg" href="{% url 'contact' %}">Get a Free Consultation</a>
+                <a class="btn btn-secondary btn-lg" href="{% url 'services' %}">Explore Our Services</a>
+            </div>
+            <ul class="hero-tags" aria-label="Key Technologies">
+                <li>Websites</li>
+                <li>Mobile Apps</li>
+                <li>Cloud &amp; Hosting</li>
+                <li>UI/UX Design</li>
+                <li>SEO &amp; Growth</li>
+            </ul>
+        </div>
+        
+        <div class="hero-mockup-wrapper" role="img" aria-label="Interactive illustration of business website and mobile app">
+            <div class="mock">
+                <div class="browser">
+                    <div class="bar">
+                        <b></b><b></b><b></b>
+                    </div>
+                    <div class="body">
+                        <div class="l" style="width: 45%;"></div>
+                        <div class="hb"></div>
+                        <div class="g">
+                            <span></span><span></span><span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="phone">
+                    <div class="l" style="width: 55%;"></div>
+                    <div class="c"></div>
+                    <div class="c2"></div>
+                    <div class="l"></div>
+                    <div class="l" style="width: 70%;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ==========================================================================
+     STATS BAR
+     ========================================================================== -->
+<div class="wrap statwrap">
+    <div class="stats rv" aria-label="Key Statistics">
+        <div>
+            <b data-n="7">7+</b>
+            <span>Core Services</span>
+        </div>
+        <div>
+            <b data-n="5">5</b>
+            <span>Step Process</span>
+        </div>
+        <div>
+            <b data-n="6">6</b>
+            <span>Reasons to Choose Us</span>
+        </div>
+        <div>
+            <b data-n="3">3+</b>
+            <span>Featured Demos</span>
+        </div>
+    </div>
+</div>
+
+<!-- ==========================================================================
+     ABOUT SECTION
+     ========================================================================== -->
+<section id="about">
+    <div class="wrap about-grid">
+        <div class="rv about-intro">
+            <span class="sec-badge">About VR TECH Solutions</span>
+            <h2>Technology that drives measurable business growth</h2>
+            <p>VR TECH Solutions helps businesses establish, improve, and scale their digital presence. We offer flexible, project-based services shaped around each client's unique goals — from a high-converting single landing page to full-scale custom software applications.</p>
+            <ul class="audience" aria-label="Who We Serve">
+                <li>Small Businesses</li>
+                <li>Startups</li>
+                <li>Retail Shops</li>
+                <li>Corporate Offices</li>
+                <li>Clinics &amp; Healthcare</li>
+                <li>Educational Institutions</li>
+            </ul>
+        </div>
+        <ol class="steps rv" aria-label="Our 5-Step Approach">
+            <li>
+                <b>1. Understand the Business</b>
+                <span>We learn your specific goals, target customers, and daily operational workflow.</span>
+            </li>
+            <li>
+                <b>2. Plan the Solution</b>
+                <span>We recommend the optimal technology stack and agree on clear scope and deliverables.</span>
+            </li>
+            <li>
+                <b>3. Build with Precision</b>
+                <span>Clean, robust, and maintainable code engineered to high modern standards.</span>
+            </li>
+            <li>
+                <b>4. Test &amp; Deliver</b>
+                <span>Every feature is thoroughly tested across mobile, tablet, and desktop devices before launch.</span>
+            </li>
+            <li>
+                <b>5. Support &amp; Scale</b>
+                <span>We remain available for long-term updates, enhancements, and dedicated technical maintenance.</span>
+            </li>
+        </ol>
+    </div>
+</section>
+
+<!-- ==========================================================================
+     SERVICES SECTION
+     ========================================================================== -->
+<section id="services" class="alt-section">
+    <div class="wrap">
+        <div class="sec-h text-center rv">
+            <span class="sec-badge">Our Expertise</span>
+            <h2>Technology services for every stage of growth</h2>
+            <p>Practical, cost-effective digital solutions designed specifically around your operational needs.</p>
+        </div>
+        
+        <div class="grid g4">
+            <article class="card rv">
+                <div class="ic">
+                    <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                </div>
+                <h3>Website Development</h3>
+                <p>High-performance business websites, landing pages, and responsive corporate web portals.</p>
+                <a class="more" href="{% url 'contact' %}">Get started</a>
+            </article>
+            
+            <article class="card rv">
+                <div class="ic">
+                    <svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>
+                </div>
+                <h3>Mobile App Development</h3>
+                <p>Custom Android, iOS, and cross-platform mobile apps for customers and internal teams.</p>
+                <a class="more" href="{% url 'contact' %}">Get started</a>
+            </article>
+            
+            <article class="card rv">
+                <div class="ic">
+                    <svg viewBox="0 0 24 24"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg>
+                </div>
+                <h3>Business Software</h3>
+                <p>Tailored ERP, billing, booking management, and automated workflow solutions.</p>
+                <a class="more" href="{% url 'contact' %}">Get started</a>
+            </article>
+            
+            <article class="card rv">
+                <div class="ic">
+                    <svg viewBox="0 0 24 24"><path d="M7 18a4 4 0 010-8 5 5 0 019.6-1A4.5 4.5 0 0117 18z"/></svg>
+                </div>
+                <h3>Cloud, Hosting &amp; Domain</h3>
+                <p>Cloud server hosting, secure domains, Google Workspace, SSL security, and backups.</p>
+                <a class="more" href="{% url 'contact' %}">Get started</a>
+            </article>
+            
+            <article class="card rv">
+                <div class="ic">
+                    <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-5-5"/></svg>
+                </div>
+                <h3>Digital Marketing &amp; SEO</h3>
+                <p>Google Business Profile optimization, local Chennai SEO, and strategic social presence.</p>
+                <a class="more" href="{% url 'contact' %}">Get started</a>
+            </article>
+            
+            <article class="card rv">
+                <div class="ic">
+                    <svg viewBox="0 0 24 24"><path d="M12 3l2.5 5.5L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-.5z"/></svg>
+                </div>
+                <h3>UI/UX &amp; Branding</h3>
+                <p>Professional logo design, modern brand identity, brochures, and seamless UI interfaces.</p>
+                <a class="more" href="{% url 'contact' %}">Get started</a>
+            </article>
+            
+            <article class="card rv">
+                <div class="ic">
+                    <svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 00-5 5L3 18l3 3 6.7-6.7a4 4 0 005-5l-2.4 2.4-2.6-.4-.4-2.6z"/></svg>
+                </div>
+                <h3>AMC &amp; Technical Support</h3>
+                <p>Annual maintenance contracts, regular updates, bug fixing, and reliable on-demand support.</p>
+                <a class="more" href="{% url 'contact' %}">Get started</a>
+            </article>
+            
+            <article class="card cta-card rv">
+                <h3>Custom Requirement?</h3>
+                <p>Tell us what your business needs and we will architect the ideal technology solution.</p>
+                <a class="more" href="{% url 'contact' %}">Talk to us</a>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ==========================================================================
+     WHY BUSINESSES CHOOSE VR TECH
+     ========================================================================== -->
+<section id="why">
+    <div class="wrap">
+        <div class="sec-h text-center rv">
+            <span class="sec-badge">Why Partner With Us</span>
+            <h2>Why businesses choose VR TECH Solutions</h2>
+            <p>A dependable, transparent technology partner dedicated to your long-term success.</p>
+        </div>
+        <div class="grid g3">
+            <div class="card rv">
+                <div class="ic">
+                    <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                </div>
+                <h3>Business-Focused</h3>
+                <p>We choose technologies that solve real commercial problems, boost conversions, and cut operational overhead.</p>
+            </div>
+            <div class="card rv">
+                <div class="ic">
+                    <svg viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                </div>
+                <h3>Flexible &amp; Project-Based</h3>
+                <p>Engage us for precisely what you need, from a quick single landing page to full-scale SaaS platforms.</p>
+            </div>
+            <div class="card rv">
+                <div class="ic">
+                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M16 8l-8 8M8 8l8 8"/></svg>
+                </div>
+                <h3>Transparent &amp; Cost-Effective</h3>
+                <p>Clear, practical pricing with zero hidden charges, tailored for startups, clinics, and growing local businesses.</p>
+            </div>
+            <div class="card rv">
+                <div class="ic">
+                    <svg viewBox="0 0 24 24"><path d="M20 7h-9M14 17H5M12 12H3"/></svg>
+                </div>
+                <h3>100% Customized</h3>
+                <p>No cookie-cutter templates. Every build is sculpted around your exact workflow, branding, and customer journey.</p>
+            </div>
+            <div class="card rv">
+                <div class="ic">
+                    <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                </div>
+                <h3>Clear Communication</h3>
+                <p>Direct communication with the lead engineers, weekly milestone updates, and prompt responses.</p>
+            </div>
+            <div class="card rv">
+                <div class="ic">
+                    <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <h3>Post-Launch Support</h3>
+                <p>We remain by your side for training, updates, server maintenance, and proactive performance tuning.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==========================================================================
+     SELECTED PROJECTS SECTION
+     ========================================================================== -->
+<section id="projects" class="alt-section">
+    <div class="wrap">
+        <div class="sec-h text-center rv">
+            <span class="sec-badge">Our Portfolio</span>
+            <h2>Selected projects &amp; live demos</h2>
+            <p>Sample solutions that demonstrate what we can architect and deliver for your company.</p>
+        </div>
+        <div class="grid g3">
+            <article class="card rv">
+                <div class="thumb t1" aria-hidden="true">Pharmacy Website</div>
+                <span class="badge">Live Demo Project</span>
+                <h3>Sri Venkateswara Medicals</h3>
+                <p>A high-speed pharmacy and healthcare portal featuring categorized product catalogs, store details, prescription upload, and instant WhatsApp ordering for local Chennai customers.</p>
+                <a class="more" href="{% url 'contact' %}">Request similar demo</a>
+            </article>
+            
+            <article class="card rv">
+                <div class="thumb t2" aria-hidden="true">Booking Application</div>
+                <span class="badge">Concept Demo</span>
+                <h3>Marriage Hall Management App</h3>
+                <p>A streamlined hall and banquet booking management application with calendar availability checking, customer enquiry tracking, billing generation, and mobile-first admin controls.</p>
+                <a class="more" href="{% url 'contact' %}">Request similar demo</a>
+            </article>
+            
+            <article class="card rv">
+                <div class="thumb t3" aria-hidden="true">Corporate Platform</div>
+                <span class="badge">Company Project</span>
+                <h3>VR TECH Solutions Website</h3>
+                <p>Our ultra-fast responsive enterprise platform demonstrating dynamic brand identity, SEO optimization, and instant WhatsApp communication integration.</p>
+                <a class="more" href="{% url 'contact' %}">Explore solution</a>
+            </article>
+        </div>
+        <p class="note text-center">Demo and concept projects are sample builds created to demonstrate our full engineering capabilities.</p>
+    </div>
+</section>
+
+<!-- ==========================================================================
+     PROCESS SECTION
+     ========================================================================== -->
+<section id="process">
+    <div class="wrap">
+        <div class="sec-h text-center rv">
+            <span class="sec-badge">How We Work</span>
+            <h2>A clear, transparent 5-step process</h2>
+            <p>From the first discovery conversation to deployment and continuous support, you are always in control.</p>
+        </div>
+        <div class="proc">
+            <div class="rv">
+                <h3>1. Discuss</h3>
+                <p>Understand your business workflow, goals, and specific project requirements.</p>
+            </div>
+            <div class="rv">
+                <h3>2. Plan</h3>
+                <p>Define the technical architecture, scope, timeline, and exact deliverables.</p>
+            </div>
+            <div class="rv">
+                <h3>3. Design</h3>
+                <p>Craft the visual system, UI mockups, and responsive wireframes for your approval.</p>
+            </div>
+            <div class="rv">
+                <h3>4. Develop</h3>
+                <p>Build the solution with clean code, secure databases, and rigorous multi-device testing.</p>
+            </div>
+            <div class="rv">
+                <h3>5. Launch &amp; Support</h3>
+                <p>Deploy to secure production cloud servers and provide dedicated ongoing maintenance.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==========================================================================
+     CTA BANNER
+     ========================================================================== -->
+<section style="padding-top: 0;">
+    <div class="wrap">
+        <div class="banner rv">
+            <h2>Have a project in mind?</h2>
+            <p>Let's turn your ideas into high-performance digital solutions that elevate your brand.</p>
+            <div class="cta-row">
+                <a class="btn btn-primary btn-lg" href="{% url 'contact' %}">Get a Free Consultation</a>
+                <a class="btn btn-secondary btn-lg" href="https://wa.me/918124428358?text=Hello%20VR%20TECH%20Solutions%2C%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==========================================================================
+     CONTACT SECTION
+     ========================================================================== -->
+<section id="contact" class="alt-section">
+    <div class="wrap contact-grid">
+        <div class="rv">
+            <span class="sec-badge">Contact Us</span>
+            <div class="sec-h" style="margin-bottom: 0;">
+                <h2>Let's talk about your project</h2>
+                <p>Share your vision and requirements, and our engineering team will get back to you with a detailed estimate and proposal.</p>
+            </div>
+            <ul class="info">
+                <li>
+                    <span class="ic">
+                        <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg>
+                    </span>
+                    <div>
+                        <small>Founder &amp; Lead</small>
+                        <span>Vimalraj Palani</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="ic">
+                        <svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg>
+                    </span>
+                    <div>
+                        <small>Direct Phone / WhatsApp</small>
+                        <a href="tel:+918124428358">+91 81244 28358</a>
+                    </div>
+                </li>
+                <li>
+                    <span class="ic">
+                        <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+                    </span>
+                    <div>
+                        <small>Email Address</small>
+                        <a href="mailto:pvrajmary@gmail.com">pvrajmary@gmail.com</a>
+                    </div>
+                </li>
+                <li>
+                    <span class="ic">
+                        <svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                    </span>
+                    <div>
+                        <small>Office Address</small>
+                        <span>2/8 Murthy Building, Govindappa Naicken Street, Palaniappa Nagar, Vanagaram, Chennai 600095</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        <div>
+            <form id="f" class="brand-form rv" method="POST" action="{% url 'home' %}#contact">
+                {% csrf_token %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert {% if message.tags %}alert-{{ message.tags }}{% else %}alert-success{% endif %}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+                
+                <div class="form-row">
+                    <label class="form-label">
+                        Your Full Name *
+                        <input class="form-control" name="name" required autocomplete="name" placeholder="e.g. John Doe">
+                    </label>
+                    <label class="form-label">
+                        Phone Number *
+                        <input class="form-control" name="phone" type="tel" required autocomplete="tel" placeholder="+91 98765 43210">
+                    </label>
+                </div>
+                
+                <label class="form-label">
+                    Email Address *
+                    <input class="form-control" name="email" type="email" required autocomplete="email" placeholder="john@example.com">
+                </label>
+                
+                <label class="form-label">
+                    Service Required
+                    <select class="form-control" name="service_required">
+                        <option value="Website Development">Website Development</option>
+                        <option value="Mobile App Development">Mobile App Development</option>
+                        <option value="Business Software Solutions">Business Software Solutions</option>
+                        <option value="Cloud, Hosting &amp; Domain">Cloud, Hosting &amp; Domain</option>
+                        <option value="Digital Marketing &amp; SEO">Digital Marketing &amp; SEO</option>
+                        <option value="UI/UX &amp; Branding">UI/UX &amp; Branding</option>
+                        <option value="AMC &amp; Technical Support">AMC &amp; Technical Support</option>
+                        <option value="Other / Not sure yet">Other / Not sure yet</option>
+                    </select>
+                </label>
+                
+                <label class="form-label">
+                    Project Details / Questions
+                    <textarea class="form-control" name="message" placeholder="Briefly describe what you're looking to build, your timeline, or requirements..."></textarea>
+                </label>
+                
+                <button class="btn btn-primary btn-lg" type="submit" style="width: 100%;">Send Enquiry &bull; Connect on WhatsApp</button>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

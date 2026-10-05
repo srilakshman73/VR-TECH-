@@ -1,0 +1,39 @@
+{% load static %}
+<header id="top">
+    <div class="wrap nav">
+        <a class="brand-logo-link" href="{% url 'home' %}" aria-label="VR TECH Solutions Home">
+            <div class="brand-logo-circle">
+                <img src="{% static 'images/logo-circle.png' %}" alt="VR TECH Solutions Logo" class="brand-logo-img" width="52" height="52">
+            </div>
+            <div class="brand-logo-text">
+                VR TECH
+                <small>Solutions</small>
+            </div>
+        </a>
+        
+        <nav class="main-nav" id="mainNav" aria-label="Main Navigation">
+            <ul id="menu">
+                <li><a href="{% url 'home' %}" class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}">Home</a></li>
+                <li><a href="{% url 'about' %}" class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}">About</a></li>
+                <li><a href="{% url 'services' %}" class="{% if request.resolver_match.url_name == 'services' %}active{% endif %}">Services</a></li>
+                <li><a href="{% url 'projects' %}" class="{% if request.resolver_match.url_name == 'projects' %}active{% endif %}">Projects</a></li>
+                <li><a href="{% url 'process' %}" class="{% if request.resolver_match.url_name == 'process' %}active{% endif %}">Process</a></li>
+                <li><a href="{% url 'contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}">Contact</a></li>
+                <li class="mobile-only-cta" style="display: none; padding-top: 12px;">
+                    <a href="{% url 'contact' %}" class="btn btn-primary" style="width: 100%;">Get a Quote</a>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="nav-actions">
+            <a href="{% url 'contact' %}" class="btn btn-primary btn-sm desktop-only-cta">Get a Quote</a>
+            <button class="burger" id="burger" aria-label="Open Navigation Menu" aria-expanded="false" aria-controls="menu">&#9776;</button>
+        </div>
+    </div>
+</header>
+<style>
+@media (max-width: 768px) {
+    .desktop-only-cta { display: none !important; }
+    .mobile-only-cta { display: block !important; }
+}
+</style>

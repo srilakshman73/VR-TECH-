@@ -1,0 +1,163 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Contact Us | VR TECH Solutions Chennai{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<div class="page-header">
+    <div class="wrap">
+        <span class="sec-badge" style="background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.25); color: #fff;">Get In Touch</span>
+        <h1>Contact VR TECH Solutions</h1>
+        <p>Let's discuss how we can engineer the right digital solution for your business.</p>
+    </div>
+</div>
+
+<!-- Main Contact Section -->
+<section id="contact">
+    <div class="wrap contact-grid">
+        <div class="rv">
+            <span class="sec-badge">Direct Communication</span>
+            <div class="sec-h" style="margin-bottom: 0;">
+                <h2>Let's talk about your project</h2>
+                <p>Share your requirements and our team will get back to you promptly with recommendations and a free estimate.</p>
+            </div>
+            
+            <ul class="info">
+                <li>
+                    <span class="ic">
+                        <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg>
+                    </span>
+                    <div>
+                        <small>Founder &amp; Lead</small>
+                        <span style="font-weight: 600; color: var(--dark-navy);">Vimalraj Palani</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="ic">
+                        <svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg>
+                    </span>
+                    <div>
+                        <small>Phone &amp; WhatsApp</small>
+                        <a href="tel:+918124428358">+91 81244 28358</a>
+                    </div>
+                </li>
+                <li>
+                    <span class="ic">
+                        <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+                    </span>
+                    <div>
+                        <small>Official Email</small>
+                        <a href="mailto:pvrajmary@gmail.com">pvrajmary@gmail.com</a>
+                    </div>
+                </li>
+                <li>
+                    <span class="ic">
+                        <svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                    </span>
+                    <div>
+                        <small>Office Location</small>
+                        <span>2/8 Murthy Building, Govindappa Naicken Street, Palaniappa Nagar, Vanagaram, Chennai 600095</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        <div>
+            <form id="f" class="brand-form rv" method="POST" action="{% url 'contact' %}">
+                {% csrf_token %}
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert {% if message.tags %}alert-{{ message.tags }}{% else %}alert-success{% endif %}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+                
+                <div class="form-row">
+                    <label class="form-label">
+                        Your Name *
+                        <input class="form-control" name="name" required autocomplete="name" placeholder="Your Full Name">
+                    </label>
+                    <label class="form-label">
+                        Phone Number *
+                        <input class="form-control" name="phone" type="tel" required autocomplete="tel" placeholder="+91 98765 43210">
+                    </label>
+                </div>
+                
+                <label class="form-label">
+                    Email Address *
+                    <input class="form-control" name="email" type="email" required autocomplete="email" placeholder="name@company.com">
+                </label>
+                
+                <label class="form-label">
+                    Service Required
+                    <select class="form-control" name="service_required">
+                        <option value="Website Development">Website Development</option>
+                        <option value="Mobile App Development">Mobile App Development</option>
+                        <option value="Business Software Solutions">Business Software Solutions</option>
+                        <option value="Cloud, Hosting &amp; Domain">Cloud, Hosting &amp; Domain</option>
+                        <option value="Digital Marketing &amp; SEO">Digital Marketing &amp; SEO</option>
+                        <option value="UI/UX &amp; Branding">UI/UX &amp; Branding</option>
+                        <option value="AMC &amp; Technical Support">AMC &amp; Technical Support</option>
+                        <option value="Other / Not sure yet">Other / Not sure yet</option>
+                    </select>
+                </label>
+                
+                <label class="form-label">
+                    Project Details
+                    <textarea class="form-control" name="message" placeholder="Tell us about your project goals, required features, or budget..."></textarea>
+                </label>
+                
+                <button class="btn btn-primary btn-lg" type="submit" style="width: 100%;">Submit Enquiry &bull; Connect on WhatsApp</button>
+                <p style="margin: 0; font-size: 0.88rem; color: var(--text-secondary); text-align: center;">We will get back to you promptly within a few hours.</p>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- FAQs Section -->
+<section class="alt-section">
+    <div class="wrap">
+        <div class="sec-h text-center rv">
+            <span class="sec-badge">Common Questions</span>
+            <h2>Frequently Asked Questions</h2>
+            <p>Quick answers to common questions about our technical services and engagement process.</p>
+        </div>
+        
+        <div class="grid g2" style="max-width: 960px; margin: 0 auto;">
+            <div class="card rv">
+                <div class="ic">
+                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                </div>
+                <h3>How long does it take to build a website?</h3>
+                <p>A standard business website typically takes 1 to 3 weeks from initial design to final launch. Complex custom applications take longer depending on feature scope.</p>
+            </div>
+            
+            <div class="card rv">
+                <div class="ic">
+                    <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+                </div>
+                <h3>Do you provide domain and hosting?</h3>
+                <p>Yes, we offer fully managed cloud hosting, domain registration, SSL security certificates, and business email setups as part of our comprehensive packages.</p>
+            </div>
+            
+            <div class="card rv">
+                <div class="ic">
+                    <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                </div>
+                <h3>What technologies do you use?</h3>
+                <p>We specialize in modern, high-performance web frameworks including Python, Django, React, vanilla HTML5/CSS3/JS, PostgreSQL, and scalable cloud architectures.</p>
+            </div>
+            
+            <div class="card rv">
+                <div class="ic">
+                    <svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 00-5 5L3 18l3 3 6.7-6.7a4 4 0 005-5l-2.4 2.4-2.6-.4-.4-2.6z"/></svg>
+                </div>
+                <h3>Can you maintain our existing website?</h3>
+                <p>Absolutely. We provide AMC (Annual Maintenance Contracts), performance optimization, security audits, and continuous updates for existing websites and applications.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,61 @@
+{% load static %}
+<footer class="brand-footer">
+    <div class="wrap">
+        <div class="fg">
+            <div class="footer-brand">
+                <a class="brand-logo-link" href="{% url 'home' %}" aria-label="VR TECH Solutions Home" style="margin-bottom: 18px;">
+                    <div class="brand-logo-circle" style="width: 58px; height: 58px; border-color: rgba(21, 87, 214, 0.4);">
+                        <img src="{% static 'images/logo-circle.png' %}" alt="VR TECH Solutions Logo" class="brand-logo-img" width="58" height="58">
+                    </div>
+                    <div class="brand-logo-text" style="color: #FFFFFF;">
+                        VR TECH
+                        <small style="color: var(--light-blue);">Solutions</small>
+                    </div>
+                </a>
+                <p>Technology that drives business growth. Robust websites, mobile apps and business software built for growing enterprises and institutions.</p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
+                    <li><a href="{% url 'projects' %}">Projects &amp; Demos</a></li>
+                    <li><a href="{% url 'process' %}">Our Process</a></li>
+                    <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="{% url 'services' %}">Website Development</a></li>
+                    <li><a href="{% url 'services' %}">Mobile Applications</a></li>
+                    <li><a href="{% url 'services' %}">Business Software</a></li>
+                    <li><a href="{% url 'services' %}">Cloud, Hosting &amp; Domain</a></li>
+                    <li><a href="{% url 'services' %}">Digital Marketing &amp; SEO</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Contact</h3>
+                <ul>
+                    <li class="footer-contact-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg>
+                        <span>Vimalraj Palani (Owner)</span>
+                    </li>
+                    <li class="footer-contact-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg>
+                        <a href="tel:+918124428358">+91 81244 28358</a>
+                    </li>
+                    <li class="footer-contact-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+                        <a href="mailto:pvrajmary@gmail.com">pvrajmary@gmail.com</a>
+                    </li>
+                    <li class="footer-contact-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                        <span>Vanagaram, Chennai 600095</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="copy">&copy; 2026 VR TECH Solutions. All rights reserved. Built with precision and dependability.</div>
+    </div>
+</footer>

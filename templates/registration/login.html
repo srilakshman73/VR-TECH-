@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Sign In | VR TECH Solutions{% endblock %}
+
+{% block content %}
+<div class="auth-wrapper">
+    <div class="auth-card rv">
+        <a href="{% url 'home' %}" style="display: inline-block;">
+            <div class="brand-logo-circle auth-logo" style="width: 72px; height: 72px; margin: 0 auto 20px;">
+                <img src="{% static 'images/logo-circle.png' %}" alt="VR TECH Solutions Logo" class="brand-logo-img" width="72" height="72">
+            </div>
+        </a>
+        <h1>Welcome Back</h1>
+        <p class="subtitle">Sign in to your client account</p>
+        
+        {% if form.errors %}
+            <div class="alert alert-error" style="margin-bottom: 20px;">
+                Your username and password didn't match. Please try again.
+            </div>
+        {% endif %}
+        
+        <form method="POST" action="{% url 'login' %}" class="auth-form">
+            {% csrf_token %}
+            <label class="form-label">
+                Username
+                <input class="form-control" type="text" name="username" autofocus required autocomplete="username" placeholder="Username">
+            </label>
+            
+            <label class="form-label">
+                Password
+                <input class="form-control" type="password" name="password" required autocomplete="current-password" placeholder="Password">
+            </label>
+            
+            <button class="btn btn-primary btn-lg" type="submit" style="width: 100%; margin-top: 10px;">Sign In</button>
+        </form>
+        
+        <div style="margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--card-border); font-size: 0.92rem; color: var(--text-secondary);">
+            Don't have an account? <a href="{% url 'register' %}" style="color: var(--primary-blue); font-weight: 600;">Register here</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

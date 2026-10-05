@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Projects &amp; Demos | VR TECH Solutions Chennai{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<div class="page-header">
+    <div class="wrap">
+        <span class="sec-badge" style="background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.25); color: #fff;">Our Work</span>
+        <h1>Projects &amp; Live Demos</h1>
+        <p>Selected solutions and proof-of-concept builds demonstrating our technical capabilities.</p>
+    </div>
+</div>
+
+<!-- Projects Section -->
+<section id="projects">
+    <div class="wrap">
+        <div class="sec-h text-center rv">
+            <span class="sec-badge">Featured Case Studies</span>
+            <h2>Selected projects &amp; live demos</h2>
+            <p>Practical solutions engineered for speed, high user retention, and seamless business workflows.</p>
+        </div>
+        
+        <div class="grid g3">
+            <article class="card rv">
+                <div class="thumb t1" aria-hidden="true">Pharmacy Website</div>
+                <span class="badge">Live Demo Project</span>
+                <h3>Sri Venkateswara Medicals</h3>
+                <p>A responsive pharmacy website and product catalog built with intuitive search, medicine categories, WhatsApp direct ordering, and clear store location directions for local customers.</p>
+                <a class="more" href="{% url 'contact' %}">Request similar demo</a>
+            </article>
+            
+            <article class="card rv">
+                <div class="thumb t2" aria-hidden="true">Booking Application</div>
+                <span class="badge">Concept Demo</span>
+                <h3>Marriage Hall Management App</h3>
+                <p>A web and mobile application designed for venue managers to handle hall bookings, calendar availability, customer contracts, advance payments, and staff schedules in real-time.</p>
+                <a class="more" href="{% url 'contact' %}">Request similar demo</a>
+            </article>
+            
+            <article class="card rv">
+                <div class="thumb t3" aria-hidden="true">Corporate Platform</div>
+                <span class="badge">Company Project</span>
+                <h3>VR TECH Solutions Website</h3>
+                <p>Our ultra-responsive corporate platform built on Django, featuring a unified brand design system, interactive UI elements, and instant WhatsApp communication flows.</p>
+                <a class="more" href="{% url 'contact' %}">Explore solution</a>
+            </article>
+        </div>
+        
+        <p class="note text-center">Demo and concept projects are sample builds created to demonstrate our full engineering capabilities.</p>
+    </div>
+</section>
+
+<!-- Client Testimonials Section -->
+<section class="alt-section">
+    <div class="wrap">
+        <div class="sec-h text-center rv">
+            <span class="sec-badge">Client Trust</span>
+            <h2>Client Success Stories</h2>
+            <p>Real feedback from businesses and managers who partner with VR TECH Solutions.</p>
+        </div>
+        
+        <div class="grid g3">
+            <div class="card rv" style="background: var(--white);">
+                <div class="ic">
+                    <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                </div>
+                <p style="font-style: italic; font-size: 1rem; color: var(--text-primary); margin-bottom: 20px;">
+                    "VR TECH completely revolutionized our inventory and ordering workflow. What used to take hours of manual recordkeeping now takes seconds via the custom system they built."
+                </p>
+                <h4 style="margin: 0; color: var(--dark-navy);">Ramesh K.</h4>
+                <span style="font-size: 0.85rem; color: var(--text-secondary);">Logistics &amp; Retail Manager</span>
+            </div>
+            
+            <div class="card rv" style="background: var(--white);">
+                <div class="ic">
+                    <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                </div>
+                <p style="font-style: italic; font-size: 1rem; color: var(--text-primary); margin-bottom: 20px;">
+                    "The website redesign increased our clinic's weekly patient inquiries significantly. Their attention to mobile responsiveness and speed was remarkable."
+                </p>
+                <h4 style="margin: 0; color: var(--dark-navy);">Dr. Anita Prakash</h4>
+                <span style="font-size: 0.85rem; color: var(--text-secondary);">Dental Care Clinic</span>
+            </div>
+            
+            <div class="card rv" style="background: var(--white);">
+                <div class="ic">
+                    <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                </div>
+                <p style="font-style: italic; font-size: 1rem; color: var(--text-primary); margin-bottom: 20px;">
+                    "We needed a secure and dependable portal. Vimalraj and the team delivered a clean Django architecture on schedule with excellent post-launch support."
+                </p>
+                <h4 style="margin: 0; color: var(--dark-navy);">Sanjay M.</h4>
+                <span style="font-size: 0.85rem; color: var(--text-secondary);">Enterprise Operations</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Banner -->
+<section style="padding-top: 0;">
+    <div class="wrap">
+        <div class="banner rv">
+            <h2>Want a custom demo for your business?</h2>
+            <p>Tell us about your industry and we will prepare a tailored solution mockup.</p>
+            <div class="cta-row">
+                <a class="btn btn-primary btn-lg" href="{% url 'contact' %}">Request a Demo</a>
+                <a class="btn btn-secondary btn-lg" href="https://wa.me/918124428358?text=Hello%20VR%20TECH%20Solutions%2C%20I%20would%20like%20to%20see%20a%20demo%20project." target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

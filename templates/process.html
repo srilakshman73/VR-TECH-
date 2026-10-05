@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Our Process | VR TECH Solutions Chennai{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<div class="page-header">
+    <div class="wrap">
+        <span class="sec-badge" style="background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.25); color: #fff;">Our Methodology</span>
+        <h1>A Clear, Transparent Process</h1>
+        <p>From initial discovery to architecture, coding, testing, and continuous maintenance.</p>
+    </div>
+</div>
+
+<!-- Process Cards -->
+<section id="process">
+    <div class="wrap">
+        <div class="sec-h text-center rv">
+            <span class="sec-badge">Step-by-Step Delivery</span>
+            <h2>How we bring your ideas to life</h2>
+            <p>Every milestone is transparent, structured, and geared toward delivering dependable business results.</p>
+        </div>
+        
+        <div class="proc" style="margin-bottom: 50px;">
+            <div class="rv">
+                <h3>1. Discuss</h3>
+                <p>We listen closely to your business pain points, operational workflows, and software requirements.</p>
+            </div>
+            <div class="rv">
+                <h3>2. Plan</h3>
+                <p>We draft technical specifications, choose the optimal stack, and create a transparent timeline &amp; quote.</p>
+            </div>
+            <div class="rv">
+                <h3>3. Design</h3>
+                <p>We craft responsive user interfaces, wireframes, and intuitive user experiences tailored to your brand.</p>
+            </div>
+            <div class="rv">
+                <h3>4. Develop</h3>
+                <p>We build robust backend databases, clean APIs, and perform multi-device security and performance testing.</p>
+            </div>
+            <div class="rv">
+                <h3>5. Launch &amp; Support</h3>
+                <p>We handle cloud deployment, domain configuration, and stay available for ongoing enhancements and AMC.</p>
+            </div>
+        </div>
+        
+        <!-- Detailed Breakdown -->
+        <div class="grid g3">
+            <div class="card rv">
+                <div class="ic">
+                    <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                </div>
+                <h3>Detailed Documentation</h3>
+                <p>You receive full clarity on project deliverables, system architecture, and credentials with zero lock-in.</p>
+            </div>
+            <div class="card rv">
+                <div class="ic">
+                    <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <h3>Quality Assurance</h3>
+                <p>Every feature is tested on multiple devices, browsers, and network speeds to guarantee reliability.</p>
+            </div>
+            <div class="card rv">
+                <div class="ic">
+                    <svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                </div>
+                <h3>Weekly Progress Demos</h3>
+                <p>Stay informed with regular milestones, live demo links, and direct engineering feedback channels.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Banner -->
+<section style="padding-top: 0;">
+    <div class="wrap">
+        <div class="banner rv">
+            <h2>Ready to start step 1?</h2>
+            <p>Reach out today for a friendly, no-obligation discussion about your upcoming project.</p>
+            <div class="cta-row">
+                <a class="btn btn-primary btn-lg" href="{% url 'contact' %}">Start Your Project</a>
+                <a class="btn btn-secondary btn-lg" href="https://wa.me/918124428358?text=Hello%20VR%20TECH%20Solutions%2C%20I%20want%20to%20discuss%20a%20new%20project%20process." target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

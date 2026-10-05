@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}404 - Page Not Found | VR TECH Solutions{% endblock %}
+
+{% block content %}
+<section style="min-height: calc(100vh - 160px); display: flex; align-items: center; justify-content: center; padding: 140px 24px 80px; text-align: center;">
+    <div class="card rv" style="max-width: 540px; margin: 0 auto; padding: 50px 30px;">
+        <div class="brand-logo-circle" style="width: 72px; height: 72px; margin: 0 auto 24px;">
+            <img src="{% static 'images/logo-circle.png' %}" alt="VR TECH Solutions Logo" class="brand-logo-img" width="72" height="72">
+        </div>
+        <span class="badge" style="font-size: 0.95rem; padding: 6px 16px; margin-bottom: 16px;">Error 404</span>
+        <h1 style="font-size: 2.5rem; margin-bottom: 12px; color: var(--dark-navy);">Page Not Found</h1>
+        <p style="color: var(--text-secondary); margin-bottom: 28px; font-size: 1.05rem;">The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
+        <div class="cta-row" style="justify-content: center;">
+            <a href="{% url 'home' %}" class="btn btn-primary btn-lg">Return to Home</a>
+            <a href="{% url 'contact' %}" class="btn btn-secondary btn-lg">Contact Support</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Us | VR TECH Solutions Chennai{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<div class="page-header">
+    <div class="wrap">
+        <span class="sec-badge" style="background: rgba(255,255,255,0.15); border-color: rgba(255,255,255,0.25); color: #fff;">About Our Company</span>
+        <h1>About VR TECH Solutions</h1>
+        <p>Building robust, dependable digital solutions and scalable software for businesses in Chennai and beyond.</p>
+    </div>
+</div>
+
+<!-- Main About Content -->
+<section id="about">
+    <div class="wrap about-grid">
+        <div class="rv about-intro">
+            <span class="sec-badge">Our Foundation</span>
+            <h2>Technology that drives measurable business growth</h2>
+            <p>VR TECH Solutions helps businesses establish, improve, and scale their digital presence. We offer flexible, project-based services shaped around each client's unique goals — from a single high-converting landing page to complete enterprise web platforms.</p>
+            <ul class="audience" aria-label="Who We Serve">
+                <li>Small Businesses</li>
+                <li>Startups</li>
+                <li>Retail Shops</li>
+                <li>Corporate Offices</li>
+                <li>Clinics &amp; Healthcare</li>
+                <li>Institutions</li>
+            </ul>
+        </div>
+        <ol class="steps rv" aria-label="Our 5-Step Approach">
+            <li>
+                <b>1. Understand the Business</b>
+                <span>We learn your specific goals, target audience, and operational requirements.</span>
+            </li>
+            <li>
+                <b>2. Plan the Solution</b>
+                <span>We recommend the right tech stack and agree on transparent scope and timeline.</span>
+            </li>
+            <li>
+                <b>3. Build with Precision</b>
+                <span>Clean, maintainable, and high-performance code adhering to industry standards.</span>
+            </li>
+            <li>
+                <b>4. Test &amp; Deliver</b>
+                <span>Every feature is checked across devices and browsers before deployment.</span>
+            </li>
+            <li>
+                <b>5. Support &amp; Scale</b>
+                <span>We remain available for ongoing updates, maintenance, and strategic enhancements.</span>
+            </li>
+        </ol>
+    </div>
+</section>
+
+<!-- Vision, Mission & Values -->
+<section class="alt-section">
+    <div class="wrap">
+        <div class="sec-h text-center rv">
+            <span class="sec-badge">Our Principles</span>
+            <h2>Our Vision, Mission &amp; Values</h2>
+            <p>Guided by clarity, engineering discipline, and a deep commitment to our clients.</p>
+        </div>
+        <div class="grid g3">
+            <div class="card rv">
+                <div class="ic">
+                    <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                </div>
+                <h3>Our Mission</h3>
+                <p>To empower emerging and established businesses with affordable, high-quality, scalable digital solutions. We bridge the gap between complex software engineering and practical business needs.</p>
+            </div>
+            <div class="card rv">
+                <div class="ic">
+                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+                </div>
+                <h3>Our Vision</h3>
+                <p>To be the most trusted technology partner in Chennai, celebrated for technical transparency, rapid delivery, and tangible business ROI for our clients.</p>
+            </div>
+            <div class="card rv">
+                <div class="ic">
+                    <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </div>
+                <h3>Our Core Values</h3>
+                <p>Uncompromising code quality, open communication, transparent billing, and a long-term partnership mindset on every single deployment.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call To Action -->
+<section style="padding-top: 0;">
+    <div class="wrap">
+        <div class="banner rv">
+            <h2>Ready to work with a dedicated tech partner?</h2>
+            <p>Let's discuss how we can build or optimize your digital infrastructure.</p>
+            <div class="cta-row">
+                <a class="btn btn-primary btn-lg" href="{% url 'contact' %}">Schedule a Consultation</a>
+                <a class="btn btn-secondary btn-lg" href="https://wa.me/918124428358?text=Hello%20VR%20TECH%20Solutions%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener noreferrer">WhatsApp Direct</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

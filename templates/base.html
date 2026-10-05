@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>{% block title %}VR TECH Solutions | Websites, Mobile Apps & Business Software in Chennai{% endblock %}</title>
+    <meta name="description" content="VR TECH Solutions builds modern websites, mobile apps, business software, cloud services, and digital marketing solutions for growing businesses in Chennai.">
+    <meta name="theme-color" content="#0B1220">
+
+    {% load static %}
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon-16x16.png' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/apple-touch-icon.png' %}">
+
+    <!-- Google Fonts: Sora (Headings) + Inter (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Centralized Brand Stylesheet -->
+    <link rel="stylesheet" href="{% static 'css/brand.css' %}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <div class="prog" id="prog" aria-hidden="true"></div>
+
+    {% include 'navbar.html' %}
+
+    <main id="main">
+        {% block content %}
+        {% endblock content %}
+    </main>
+
+    {% include 'footer.html' %}
+
+    <!-- WhatsApp Floating Action Button -->
+    <a class="wa-float" href="https://wa.me/918124428358?text=Hello%20VR%20TECH%20Solutions%2C%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer" aria-label="Chat with VR TECH Solutions on WhatsApp">
+        <svg viewBox="0 0 24 24">
+            <path d="M12 2a10 10 0 00-8.6 15L2 22l5.1-1.3A10 10 0 1012 2zm5.2 14.2c-.2.6-1.300 1.200-1.800 1.200-.5.100-1 .2-3.200-.7-2.700-1.100-4.400-3.800-4.600-4-.1-.2-1.100-1.500-1.100-2.800s.7-2 1-2.300c.2-.3.500-.3.700-.3h.5c.2 0 .4 0 .6.500l.8 1.900c.1.200.1.400 0 .5l-.4.600-.3.400c-.1.200-.3.300-.1.600.2.300.8 1.300 1.700 2.100 1.100 1 2.100 1.300 2.400 1.500.3.100.5.100.6-.1l.9-1.100c.2-.3.400-.2.600-.1l1.900.9c.3.100.5.200.5.300.1.200.1.800-.1 1.400z"/>
+        </svg>
+    </a>
+
+    <!-- Core Interactive Scripts -->
+    <script>
+    (function(){
+        // Header scroll effect
+        var h = document.getElementById('top');
+        var burger = document.getElementById('burger');
+        var nav = document.getElementById('mainNav');
+        
+        function onScroll(){
+            if(h){
+                h.classList.toggle('scrolled', window.scrollY > 20);
+            }
+        }
+        window.addEventListener('scroll', onScroll, {passive: true});
+        onScroll();
+
+        // Mobile Burger Menu Toggle
+        if(burger && nav){
+            burger.addEventListener('click', function(e){
+                e.stopPropagation();
+                var isOpen = nav.classList.toggle('open');
+                burger.setAttribute('aria-expanded', isOpen);
+                burger.setAttribute('aria-label', isOpen ? 'Close Navigation Menu' : 'Open Navigation Menu');
+                burger.innerHTML = isOpen ? '&times;' : '&#9776;';
+            });
+
+            document.addEventListener('click', function(e){
+                if(nav.classList.contains('open') && !nav.contains(e.target) && e.target !== burger){
+                    nav.classList.remove('open');
+                    burger.setAttribute('aria-expanded', 'false');
+                    burger.innerHTML = '&#9776;';
+                }
+            });
+        }
+
+        // Scroll Reveal Observer
+        var revealElements = document.querySelectorAll('.rv');
+        if('IntersectionObserver' in window && revealElements.length > 0){
+            var observer = new IntersectionObserver(function(entries){
+                entries.forEach(function(entry){
+                    if(entry.isIntersecting){
+                        entry.target.classList.add('in');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {threshold: 0.08, rootMargin: '0px 0px -40px 0px'});
+            revealElements.forEach(function(el){ observer.observe(el); });
+        } else {
+            revealElements.forEach(function(el){ el.classList.add('in'); });
+        }
+
+        // Scroll Progress Indicator
+        var prog = document.getElementById('prog');
+        if(prog){
+            window.addEventListener('scroll', function(){
+                var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                if(docHeight > 0){
+                    var progress = (window.scrollY / docHeight) * 100;
+                    prog.style.width = Math.min(progress, 100) + '%';
+                }
+            }, {passive: true});
+        }
+
+        // Hero Word Rotator
+        var rot = document.getElementById('rot');
+        var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if(rot && !prefersReducedMotion){
+            var words = ['Go Digital.', 'Grow Faster.', 'Go Mobile.', 'Scale Online.'];
+            var wordIdx = 0;
+            setInterval(function(){
+                rot.style.opacity = '0';
+                rot.style.transform = 'translateY(8px)';
+                setTimeout(function(){
+                    wordIdx = (wordIdx + 1) % words.length;
+                    rot.textContent = words[wordIdx];
+                    rot.style.opacity = '1';
+                    rot.style.transform = 'translateY(0)';
+                }, 300);
+            }, 3200);
+            rot.style.transition = 'all 0.3s ease';
+        }
+
+        // Animated Statistics Counters
+        var statsSection = document.querySelector('.stats');
+        if(statsSection && 'IntersectionObserver' in window){
+            var statsObserver = new IntersectionObserver(function(entries){
+                entries.forEach(function(entry){
+                    if(entry.isIntersecting){
+                        statsObserver.unobserve(entry.target);
+                        entry.target.querySelectorAll('b[data-n]').forEach(function(numEl){
+                            var targetNum = parseInt(numEl.dataset.n, 10);
+                            if(isNaN(targetNum) || prefersReducedMotion){
+                                numEl.textContent = targetNum + '+';
+                                return;
+                            }
+                            var current = 0;
+                            var step = targetNum / 25;
+                            var interval = setInterval(function(){
+                                current += step;
+                                if(current >= targetNum){
+                                    numEl.textContent = targetNum + '+';
+                                    clearInterval(interval);
+                                } else {
+                                    numEl.textContent = Math.round(current);
+                                }
+                            }, 40);
+                        });
+                    }
+                });
+            }, {threshold: 0.3});
+            statsObserver.observe(statsSection);
+        }
+    })();
+    </script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>
